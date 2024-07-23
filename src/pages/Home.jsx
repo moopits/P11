@@ -1,8 +1,8 @@
 import featureImg1 from '../assets/img/icon-chat.png'
 import featureImg2 from '../assets/img/icon-money.png'
 import featureImg3 from '../assets/img/icon-security.png'
+import FeatureItens from '../components/FeatureItems'
 
-import CallFeatureItem from '../components/CallFeatureItems';
 
 const Home = () => {
 
@@ -50,8 +50,8 @@ const Home = () => {
                         We use top of the line encryption to make sure your data and money
                         is always safe.
                     </p>
-                </div> */}
-                <CallFeatureItens />
+                </div>*/}
+                <FeatureItens />
 
 
 
