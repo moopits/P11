@@ -1,21 +1,11 @@
-import React from 'react';
-import data from '../assets/json/featureItems.json'
-
-
-const FeatureItens = () => {
+const FeatureItem = ({ data }) => {
   return (
-    <div className="features">
-        {data.map(item => (
-        <div key={item.id} className="feature-item"> {/* Utilisez un attribut key unique, ici item.id */}
-          <img src={item.img}  alt="Chat Icon" className="feature-icon" />   
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-        </div>
-        
-      ))}
-        
+    <div className="feature-item">
+      <img src={data.img} alt={data.title} className="feature-icon" />
+      <h3 className="feature-item-title">{data.title}</h3>
+      <p>{data.description}</p>
     </div>
-  );
-};
-console.log(data)
-export default FeatureItens;
+  )
+}
+
+export default FeatureItem;

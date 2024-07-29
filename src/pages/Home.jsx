@@ -1,5 +1,5 @@
-import FeatureItens from '../components/FeatureItems'
-
+import FeatureItem from "../components/FeatureItems"
+import data from '../assets/json/featureItems.json'
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
             </div>
             <section className="features">
                 <h2 className="sr-only">Features</h2>
-                <FeatureItens />
+                {data.map(item => <FeatureItem key={item.id} data={item} />)}
             </section>
         </main>
     )
