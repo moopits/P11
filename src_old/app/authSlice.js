@@ -5,8 +5,7 @@ export const counterSlice = createSlice({
     name: 'auth',
     initialState: {
         token: null,
-        user: null,
-        isEditing: false
+        user: null
     },
     reducers: {
         setToken: (state, action) => {
@@ -19,18 +18,14 @@ export const counterSlice = createSlice({
             state.token = null,
                 state.user = null
         },
-        setIsEditing: (state, action) => {
-            state.isEditing = action.payload
-        }
     },
 })
 
 
 // Action creators are generated for each case reducer function
-export const { setToken, setUser, signout, setIsEditing } = counterSlice.actions
+export const { setToken, setUser, signout } = counterSlice.actions
 
 export default counterSlice.reducer
 
 export const selectToken = state => state.auth.token
 export const selectUser = state => state.auth.user
-export const selectIsEditing = state => state.auth.isEditing
